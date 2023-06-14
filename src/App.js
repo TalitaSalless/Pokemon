@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { ThemeContext } from "./context/theme-context";
+import { ThemeProvider } from "./context/theme-context";
+import { AppRoutes } from "./pages/routes";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const { theme } = useContext(ThemeContext);
+
+   return (
+      <ThemeProvider theme={theme}>
+         <AppRoutes />
+      </ThemeProvider>
+   );
 }
 
 export default App;
