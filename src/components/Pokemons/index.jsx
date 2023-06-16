@@ -72,10 +72,10 @@ export const Pokemons = () => {
       <>
          <Header />
          <PokedexStyled>
-            <Cards >
+            <Cards>
                {pokemonCard.pokemons.map((pokemon, index) => (
                   <Card key={index} onClick={() => setSelectedPokemon(pokemon)}>
-                     <Link to={`/pokemon/${pokemon.id}`} >
+                     <Link to={`/pokemon/${pokemon.id}`}>
                         <PokemonCard pokemon={pokemon} theme={theme}>
                            <ImagemPokemon
                               src={

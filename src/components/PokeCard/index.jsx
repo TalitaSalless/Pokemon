@@ -19,13 +19,14 @@ import {
    PokemonCardAbility,
    PokemonInfoAbility,
    TypeName,
+   Moves,
 } from "./style";
 
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import buttonImage from "../../assets/button-image.png";
-import { ThemeToggerButton } from "../toggler-theme/index"
+import { ThemeToggerButton } from "../toggler-theme/index";
 import { ThemeContext } from "../../context/theme-context";
 
 const typeColors = {
@@ -65,7 +66,7 @@ export const PokeCard = () => {
          try {
             const { data: pokemonData } = await axios.get(pokemonUrl);
 
-            const formattedPokemon = {
+            const Pokemon = {
                name: pokemonData.name,
                image: pokemonData.sprites?.other.dream_world.front_default,
                id: pokemonData.id,
@@ -95,7 +96,7 @@ export const PokeCard = () => {
 
             const abilityData = await Promise.all(abilityDataPromises);
 
-            setPokemon(formattedPokemon);
+            setPokemon(Pokemon);
             setTypes(types);
             setMoves(moves);
             setAbilities(abilityData);
@@ -158,7 +159,7 @@ export const PokeCard = () => {
 
                <Informations>
                   <PokemonCardMove>
-                     <p>Moves</p>
+                     <Moves>Moves</Moves>
                      <PokemonInfoList>
                         {moves.slice(0, 5).map((move) => (
                            <li key={move}>

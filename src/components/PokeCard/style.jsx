@@ -10,7 +10,14 @@ export const HeaderPokemon = styled.div`
    padding: 0 10px;
    font-size: 18px;
    font-family: "Inter";
+
+   @media (max-width: 375px) {
+      font-size: 15px;
+   }
    
+   @media (max-width: 414px) {
+      font-size: 15px;
+   }
 `;
 
 export const PokemonId = styled.p`
@@ -31,6 +38,19 @@ export const Header = styled.header`
    align-items: center;
    justify-content: space-between;
    padding: 0 300px;
+
+   @media (max-width: 375px) {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 375px;
+      padding: 0 10px;
+   }
+
+   @media (max-width: 688px) {
+      padding: 0 60px;
+   }
 `;
 
 export const BackButton = styled.button`
@@ -48,6 +68,11 @@ export const BackButton = styled.button`
    &:hover {
       background-color: #0b273f;
    }
+
+   @media (max-width: 375px) {
+      margin: 0;
+      padding: 0;
+   }
 `;
 
 export const BackButtonImage = styled.img`
@@ -64,7 +89,7 @@ export const PokemonDetailsContainer = styled.section`
 `;
 
 export const PokemonCard = styled.div`
-   width: 30%;
+   max-width: 1114px;
    border: 11px solid #f0ec24;
    border-radius: 20px;
    display: flex;
@@ -74,12 +99,34 @@ export const PokemonCard = styled.div`
    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.473);
    color: ${({ theme }) => theme.textColor};
    background-color: ${({ theme }) => theme.backgroundColor};
+
+   @media (max-width: 375px) {
+      border: 5px solid #f0ec24;
+   }
+   @media (max-width: 688px) {
+      border: 5px solid #f0ec24;
+      
+   }
+   @media (max-width: 1024px) {
+      border: 5px solid #f0ec24;
+      
+   }
 `;
 
 export const PokemonImage = styled.img`
    width: 300px;
    height: 150px;
    margin: -30px 0 20px 0px;
+   
+   @media (max-width: 375px) {
+      width: 200px;
+      height: 100px;
+   }
+   
+   @media (max-width: 414px) {
+      width: 200px;
+      height: 100px;
+   }
 `;
 
 export const PokemonName = styled.h3`
@@ -89,6 +136,18 @@ export const PokemonName = styled.h3`
    font-family: "Pokemon";
    font-weight: 300;
    color: #374151;
+   
+   @media (max-width: 375px) {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px;
+   }
+   
+   @media (max-width: 414px) {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px;
+   }
 `;
 
 export const PokemonInfoList = styled.ul`
@@ -163,6 +222,23 @@ export const PokemonStats = styled.div`
    font-family: "Inter";
    text-align: center;
 
+   @media (max-width: 375px) {
+      width: 80%;
+
+      div > p {
+         font-size: 14px;
+         margin: 0;
+         border-radius: 10px;
+         background-color: aliceblue;
+         padding: 5px;
+      }
+
+      div > span {
+         font-size: 14px;
+         font-weight: 700;
+      }
+   }
+
    div > p {
       margin: 0;
       border-radius: 10px;
@@ -179,9 +255,33 @@ export const PokemonCardMove = styled.div`
    width: 100%;
    display: flex;
    align-items: center;
-   justify-content: space-around;
    flex-direction: column;
-   border-bottom: 1px solid black;
+
+   li > p {
+      padding: 0px;
+      font-size: 12px;
+   }
+
+   @media (max-width: 375px) {
+      background-color: aliceblue;
+      border-radius: 10px;
+
+      li > p {
+         padding: 0px;
+         font-size: 11px;
+      }
+   }
+   @media (max-width: 414px) {
+      background-color: aliceblue;
+      border-radius: 10px;
+   }
+`;
+
+export const Moves = styled.p`
+   margin: 0;
+   border-radius: 10px;
+   padding: 5px;
+   margin-bottom: 10px;
 `;
 
 export const PokemonCardAbility = styled.div`
@@ -190,6 +290,18 @@ export const PokemonCardAbility = styled.div`
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   margin-top: 10px;
+
+   @media (max-width: 375px) {
+      height: 100%;
+      background-color: aliceblue;
+      border-radius: 10px;
+   }
+   
+   @media (max-width: 414px) {
+      background-color: aliceblue;
+      border-radius: 10px;
+   }
 `;
 
 export const PokemonInfoAbility = styled.ul`
@@ -213,6 +325,18 @@ export const PokemonInfoAbility = styled.ul`
    li > span {
       font-size: 12px;
       margin: 0;
+   }
+
+   @media (max-width: 375px) {
+      li > p {
+         padding: 0px;
+         font-size: 12px;
+      }
+
+      li > span {
+         font-size: 12px;
+         margin: 0;
+      }
    }
 `;
 
