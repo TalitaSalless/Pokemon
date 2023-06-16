@@ -8,10 +8,10 @@ const AppRoutes = (props) => {
       <BrowserRouter>
          <Routes>
             <Route exact path="/" element={<Pokedex />} />
-            <Route exact path='/pokemon:id' element={<PokemonDetails />} />
+            <Route exact path="/pokemon/:id" element={<PokemonDetails />} />
          </Routes>
       </BrowserRouter>
-   )
+   );
 };
 
 export { AppRoutes };
