@@ -1,6 +1,6 @@
 # Projeto "Pokemon"
 
-<img src="#"/>
+<img src="https://github.com/TalitaSalless/Pokemon/blob/main/public/screen.png"/>
 
 ## Descrição
 
