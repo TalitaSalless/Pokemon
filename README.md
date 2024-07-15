@@ -1,5 +1,7 @@
 # Projeto "Pokemon"
 
+<img src="#"/>
+
 ## Descrição
 
 O projeto "Pokemon" é uma aplicação web que permite aos usuários explorar informações sobre os diferentes Pokémons. Ele consome a API pública do Pokémon (PokeAPI) para obter dados sobre os Pokémons, como seus nomes, imagens, estatísticas, movimentos e habilidades.
